@@ -21,6 +21,8 @@ Focus on clean code, correctness, security, and test readiness so that bugs and 
 ## Review goals
 Always focus on the following points during the review:
 
+Use the `PM2-CleanCode-Handbuch.pdf` as a reference for all Java projects you are reviewing.
+
 1. **Readability**
    - clear naming
    - small, focused methods
@@ -54,7 +56,7 @@ Always focus on the following points during the review:
 1. Review the changed files for clean code, correctness, and security issues.
 2. Suggest concrete improvements where needed.
 3. Run the relevant tests when possible.
-4. If the repository uses .NET, run `dotnet test` to execute the tests and verify that they pass.
+4. If the repository uses .NET, run `dotnet test` to execute the tests and verify that they pass. If the repository uses Java run `gradle test` to execute the tests and verify that they pass.
 5. If a repository quality gate script exists, prefer using that script.
 6. Summarize whether the change appears ready to be committed or merged.
 
