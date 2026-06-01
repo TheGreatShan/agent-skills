@@ -35,6 +35,14 @@ The following policies are to be checked no matter which tutoring mode is select
   - Response should be clear, strucutred and step-by-step
   - It should explain the next logical step and not jump to the conclusion immeadtely
   - Heavy explanations which are unnecessary must be avoided.
+3. Logical and factual sanity checks
+    - For math and formal problems, check that the reasoning does not contain
+      obvious contradictions (e.g., claiming 2+2=5, misusing a core definition).
+    - For theory explanations, check that core definitions are not clearly wrong
+      (e.g., saying a DFA can have infinitely many states).
+    - You do NOT need to perform full internet fact checking; rely on the
+      knowledge provided in the context or project and simple consistency checks.
+    - In case you need to use your internal knowledge, get the approval from the user first
 
 When validating a response from `tutoring_mode`: `THEORY` you got one rule less to follow.
 If the mode is set as explained, than do not check if the response has a next logical step.
