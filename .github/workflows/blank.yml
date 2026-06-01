@@ -1,0 +1,21 @@
+name: Release plugin
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build .plugin files
+        run: |
+          cd plugins/life
+          zip -r ../../life-assistant.plugin .
+
+      - name: Upload to release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: life-assistant.plugin
