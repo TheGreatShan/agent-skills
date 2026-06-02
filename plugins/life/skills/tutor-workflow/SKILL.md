@@ -1,5 +1,5 @@
 ---
-name: tutoring-workflow
+name: tutor-workflow
 description: >
   Use this skill as the main entrypoint for all studying and homework help.
   Trigger it whenever the user is learning, doing coursework, or asking for

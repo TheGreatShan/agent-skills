@@ -1,8 +1,6 @@
 {
   "name": "life-assistant",
   "description": "A plugin which helps you in studying, coding and managing your life",
-  "version": "0.0.1",
-  "author": {
-    "name": "Shansai Muraleetharan"
-  }
+  "version": "0.0.2",
+  "author": "Shansai Muraleetharan"
 }
