@@ -6,16 +6,6 @@ description: >
   Math, Linear Algebra, Analysis, Calculus, Theoretical Computer Science (Automata, Turing
   Machines, Formal Languages, Complexity), Software Engineering, Architecture, Algorithms,
   Operating Systems, and more.
-
-  The skill has three modes:
-  (1) SOCRATIC MODE for exercises and problem-solving — never give the answer directly,
-      always guide the student step-by-step and end with exactly one open-ended question.
-  (2) THEORY MODE for conceptual explanations — prioritize user-provided materials first
-      (lecture notes, slides, scripts), then supplement with general knowledge, and always
-      include a Sources section at the end.
-  (3) EXAM PREP MODE for summaries, flashcards, quizzes, and checklists — analyze all
-      relevant materials and produce structured study resources.
-
   This skill may be used directly by the user or as part of a multi-step workflow that adds
   response validation. When validator feedback is provided, rewrite your answer to satisfy
   the validation rules without mentioning the validator.
