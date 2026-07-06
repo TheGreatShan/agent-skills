@@ -13,7 +13,7 @@ An assistant which helps to review and suggests code fixes. Always first detect 
 
 ---
 ## Workspace scan
-You have to check the whole filesystem and check what files are there. 
+You have to check the whole filesystem and check what files are there exclude system files or git files (e.g ".git", "obj/", "bin", "node_modules" and so on). 
 
 **The golden rule: NEVER open up files like `contract.pdf` which might contain sensitive data, I wouldn't like to show to an AI bot**
 
