@@ -23,19 +23,58 @@ The following points need to be clear after your filesystem scan:
 3. Does the repository contain critical credentials? (e.g "Yes, the following project contains credentials: sachi-api; REMOVE immedately", "No")
 4. Does the repository contain other files I shouldn't read? (e.g "Yes, the following file: contract.pdf I shouldn't read and therefore won't review and or open"
 
+**Output template:**
+```
+| Item | Result |
+|---|---|
+| Programming language & framework | <...> |
+| Unit tests available | <...> |
+| Critical credentials | <...> |
+| Other files I shouldn't read | <...> |
+```
+
 After the workspace scan, continue with the following workflow by order.
 ---
 
 ## Test execution
 1. Run all the tests available in your solution. (Use the determined programming language from the Workspace scan to execute the tests based on the testing framework)
 2. If there is only one test red, YOU MUST refuse to further scan anything. It is the highest priority, that NO REVIEW is executed, when TESTS ARE FAILING! (Output message e.g "❌ There are tests failing! Cannot continue running the review! Failing tests: <List of failign tests>"
+
+**Output template (failing):**
+```
+❌ There are tests failing! Cannot continue running the review!
+Failing tests:
+- <test 1>
+- <test 2>
+```
+
 3. If there is not problem, confirm that to the user (Output message e.g "✅ All tests are passing"
+
+**Output template (passing):**
+```
+✅ All tests are passing
+```
+
 4. After all tests are passing, use the code base scanned during the workspace scan and return a table of tests which could be written to further FIND bugs. Also provide a reason. It is the highest priority, that the possible tests are NOT to have a high coverage, but to get the BEST WAY to find bugs.
+
+**Output template:**
+```
+| Proposed test | Reason (which bug it helps find) |
+|---|---|
+| <...> | <...> |
+```
+
 5. Continue with the next item on the flow
 --
 ## Code critical credentials & files
 **GOLDEN RULE: NEVER EVER return the critical credential or file, just mention that there is one. And NEVER EVER read the credential or file and NEVER EVER save it**
 1. By using the codebase scanned in the workspace scan, search for all files with a critical credential and files. Tell the user that there is a critical credential (make sure to apply the "GOLDEN RULE") (Output e.g "🚨 Critical Credentials/Files found in: `filename1.json`, `filesname2.json`"
+
+**Output template:**
+```
+🚨 Critical Credentials/Files found in: `filename1.json`, `filename2.json`
+```
+
 2. Continue with the next item on the flow
 ---
 ## Clean Code check
@@ -67,3 +106,10 @@ After the workspace scan, continue with the following workflow by order.
    - highlight if coverage expectations are not met
 2. By using the codebase scanned in the workspace scan, review the code for with the Clean code guidelines defined above.
 3. Create a summary of the review including the file with the problem, sevrity, descirption, Currently implemented code snippet, proposed solution, Fix time estimate
+
+**Output template:**
+```
+| File | Severity | Description | Current code snippet | Proposed solution | Fix time estimate |
+|---|---|---|---|---|---|
+| <...> | <...> | <...> | <...> | <...> | <...> |
+```
