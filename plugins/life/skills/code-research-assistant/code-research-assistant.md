@@ -50,3 +50,23 @@ Inform the user generally about the keywords you searched
 Put your web and code sources here
 
 ```
+
+---
+## OPTIONAL: Theory entry into Obsidian
+If you are able to find an Obsidian Workspace in the VSCode Workspace, please make an entry with the theory you found in the web and the answer you provided to the user. This is optional, but it would be a great help for future users of this repository.
+Please find a proper folder in the Obsidian Workspace (if you do not find any, create a new one called "Code Research Assistant") and create a new note with the following format:
+
+```
+# Topic
+
+## Description (How it works)
+
+## Diagramm (if applicable)
+
+## Example (if applicable)
+
+## Company Use case
+
+## Sources
+
+```
